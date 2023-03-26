@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td.a {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p><a th:href="@{/picture}">Back pictures list</a></p>
+<table th:object="${picture}">
+    <tr>
+        <td class="a">ID</td>
+        <td><input type="text" th:field="*{id}"></td>
+    </tr>
+    <tr>
+        <td class="a">Ma Tranh</td>
+        <td><input type="text" th:field="*{maPicture}"></td>
+    </tr>
+    <tr>
+        <td class="a">Chieu Dai</td>
+        <td><input type="text" th:field="*{dai}"></td>
+    </tr>
+    <tr>
+        <td class="a">Chieu Rong</td>
+        <td><input type="text" th:field="*{rong}"></td>
+    </tr>
+    <tr>
+        <td class="a">Chat Lieu</td>
+        <td><input type="text" th:field="*{chatLieu}"></td>
+    </tr>
+    <tr>
+        <td class="a">Mo Ta</td>
+        <td><input type="text" th:field="*{moTa}"></td>
+    </tr>
+    <tr>
+        <td class="a">Gia</td>
+        <td><input type="text" th:field="*{price}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

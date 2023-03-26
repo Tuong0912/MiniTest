@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><a th:href="@{/picture}">Back pictures list</a></p>
+<form th:action="@{/picture/update}" method="post" th:object="${picture}">
+    <fieldset>
+        <legend>Update Picture</legend>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" readonly th:field="*{id}"></td>
+            </tr>
+            <tr>
+                <td>Ma Tranh</td>
+                <td><input type="text" th:field="*{maPicture}"></td>
+            </tr>
+            <tr>
+                <td>Chieu Dai</td>
+                <td><input type="text" th:field="*{dai}"></td>
+            </tr>
+            <tr>
+                <td>Chieu Rong</td>
+                <td><input type="text" th:field="*{rong}"></td>
+            </tr>
+            <tr>
+                <td>Chat Lieu</td>
+                <td><input type="text" th:field="*{chatLieu}"></td>
+            </tr>
+            <tr>
+                <td>Mo Ta</td>
+                <td><input type="text" th:field="*{moTa}"></td>
+            </tr>
+            <tr>
+                <td>Gia</td>
+                <td><input type="text" th:field="*{price}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+</form>
+</body>
+</html>
